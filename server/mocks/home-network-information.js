@@ -3,13 +3,13 @@ module.exports = function(app) {
   var homeNetworkInformationRouter = express.Router();
 
   homeNetworkInformationRouter.post('/', function(req, res) {
-    console.log('HOSTTTTTT', req.get('host'));
+    var host = req.get('host');
     var identifier = req.body['sns_service_id'];
 
     var response = {
       '_links': {
         'diag:latest_home_network_information_job': {
-          'href': '/api/home-network-information/random-hash-' + identifier
+          'href': 'http://' + host + '/api/home-network-information/random-hash-' + identifier
         }
       }
     };

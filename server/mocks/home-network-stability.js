@@ -3,12 +3,13 @@ module.exports = function(app) {
   var homeNetworkStabilityRouter = express.Router();
 
   homeNetworkStabilityRouter.post('/', function(req, res) {
+    var host = req.get('host');
     var identifier = req.body['sns_service_id'];
 
     var response = {
       '_links': {
         'diag:latest_home_network_stability_job': {
-          'href': '/api/home-network-stability/' + identifier
+          'href': 'http://' + host + '/api/home-network-stability/' + identifier
         }
       }
     };
