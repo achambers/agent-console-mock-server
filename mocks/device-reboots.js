@@ -4,6 +4,7 @@ module.exports = function(app) {
   var counter;
 
   deviceRebootsRouter.post('/', function(req, res) {
+    var host = req.get('host');
     var identifier = req.body['sns_service_id'];
     var response;
     var responseStatus = 201;
@@ -19,7 +20,7 @@ module.exports = function(app) {
         response = {
           '_links': {
             'diag:latest_reboot_job': {
-              'href': '/api/device-reboots/random-hash-' + identifier
+              'href': 'http://' + host + '/api/device-reboots/random-hash-' + identifier
             }
           }
         };
