@@ -3,6 +3,7 @@ module.exports = function(app) {
   var homeNetworkInformationRouter = express.Router();
 
   homeNetworkInformationRouter.post('/', function(req, res) {
+    console.log('HOSTTTTTT', req.get('host'));
     var identifier = req.body['sns_service_id'];
 
     var response = {
