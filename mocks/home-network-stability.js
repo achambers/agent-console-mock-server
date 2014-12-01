@@ -29,7 +29,7 @@ module.exports = function(app) {
           status: 'completed',
           wireless: {
             rag: 'amber',
-            information_text: 'Unable to determine WiFI  reliability.\n\n Traffic loss is less than 10%',
+            information_text: 'Unable to DETERMINE WiFI  reliability.\n\n Traffic loss is less than 10%',
             next_best_steps:  '- Check WiFi interface is enabled.\n\n'
                             + '- Open a new browser window and delete the contents of the address bar.\n\n'
                             + '- Type in 192.168.0.1 and press Enter.\n\n'
