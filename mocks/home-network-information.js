@@ -30,7 +30,7 @@ module.exports = function(app) {
           wifi: {
             status: 'on',
             rag: 'green',
-            information_text: 'THE WIRELESS INTERFACE on the customers ROUTER is active.',
+            information_text: 'THE wireless interface on the customers ROUTER is active.',
             encryption: {
               type: 'WEP',
               rag: 'amber',
